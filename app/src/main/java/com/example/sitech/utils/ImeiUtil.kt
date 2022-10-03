@@ -1,7 +1,8 @@
 package com.example.sitech.utils
 
-import android.hardware.usb.UsbDevice.getDeviceId
+import androidx.core.telephony.TelephonyManagerCompat.getImei
+
 
 object ImeiUtil {
-    val imei = android.telephony.TelephonyManager.getDeviceId()
+    val imei = android.telephony.TelephonyManager.EXTRA_SUBSCRIPTION_ID
 }

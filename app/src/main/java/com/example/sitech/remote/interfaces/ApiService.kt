@@ -20,10 +20,10 @@ interface ApiService {
 
     @GET(AUTH)
     suspend fun authorizate(
-        @Query("uid") uid: UUID,
+        @Query("uid") uid: String,
         @Query("pass") pass: String,
         @Query("copyFromDevice") copyFromDevice: Boolean,
-        @Query("nfc") nfc: String = ""
+        @Query("nfc") nfc: String
     ) : Authorize
 
 }

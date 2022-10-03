@@ -12,8 +12,8 @@ class UserService(private val api: ApiService) : UsersContract {
         return api.getUsers(ImeiUtil.imei)
     }
 
-    override suspend fun authorizateUser(login: String, pass: String) {
-        return api.authorizate(ImeiUtil.imei, pass, false)
+    override suspend fun authorizateUser(login: String, pass: String): Authorize {
+        return api.authorizate(ImeiUtil.imei, pass, false, "")
     }
 
 }
